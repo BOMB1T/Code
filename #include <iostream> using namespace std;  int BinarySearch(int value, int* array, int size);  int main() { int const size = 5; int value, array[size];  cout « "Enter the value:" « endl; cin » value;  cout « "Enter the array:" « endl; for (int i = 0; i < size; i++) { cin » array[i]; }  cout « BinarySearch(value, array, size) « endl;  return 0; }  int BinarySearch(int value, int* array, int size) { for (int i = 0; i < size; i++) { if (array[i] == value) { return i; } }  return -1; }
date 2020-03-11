@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int BinarySearch(int value, int* array, int size);
+
+int main()
+{
+	int const size = 5;
+	int value, array[size];
+
+	cout « "Enter the value:" « endl;
+	cin » value;
+
+	cout « "Enter the array:" « endl;
+	for (int i = 0; i < size; i++)
+	{
+		cin » array[i];
+	}
+
+	cout « BinarySearch(value, array, size) « endl;
+
+	return 0;
+}
+
+int BinarySearch(int value, int* array, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i] == value)
+	{
+	return i;
+	}
+	}
+return -1;
+}
